@@ -1,219 +1,948 @@
 <!DOCTYPE html>
-        <html>
-        <head>
-            <meta charset="UTF-8">
-            <title>Overview</title>
-            <style>
-/* From extension vscode.github */
+<html>
+<head>
+<title>README.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
 /*---------------------------------------------------------------------------------------------
  *  Copyright (c) Microsoft Corporation. All rights reserved.
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-.vscode-dark img[src$=\#gh-light-mode-only],
-.vscode-light img[src$=\#gh-dark-mode-only],
-.vscode-high-contrast:not(.vscode-high-contrast-light) img[src$=\#gh-light-mode-only],
-.vscode-high-contrast-light img[src$=\#gh-dark-mode-only] {
-	display: none;
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
 }
 
-/* From extension fantasy.markdown-all-in-one-for-web */
-.task-list-item {
-    list-style-type: none;
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
 }
 
-.task-list-item-checkbox {
-    margin-left: -20px;
-    vertical-align: middle;
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
 }
-/* Error */
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
 </style>
-            
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+
 <style>
-            body {
-                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
-                font-size: 14px;
-                line-height: 1.6;
-            }
-        </style>
-        <style>
-.task-list-item {
-    list-style-type: none;
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
 }
 
-.task-list-item-checkbox {
-    margin-left: -20px;
-    vertical-align: middle;
-    pointer-events: none;
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
 }
 </style>
+
 <style>
-:root {
-  --color-note: #0969da;
-  --color-tip: #1a7f37;
-  --color-warning: #9a6700;
-  --color-severe: #bc4c00;
-  --color-caution: #d1242f;
-  --color-important: #8250df;
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
 }
 
 </style>
-<style>
-@media (prefers-color-scheme: dark) {
-  :root {
-    --color-note: #2f81f7;
-    --color-tip: #3fb950;
-    --color-warning: #d29922;
-    --color-severe: #db6d28;
-    --color-caution: #f85149;
-    --color-important: #a371f7;
-  }
-}
 
-</style>
-<style>
-.markdown-alert {
-  padding: 0.5rem 1rem;
-  margin-bottom: 16px;
-  color: inherit;
-  border-left: .25em solid #888;
-}
-
-.markdown-alert>:first-child {
-  margin-top: 0
-}
-
-.markdown-alert>:last-child {
-  margin-bottom: 0
-}
-
-.markdown-alert .markdown-alert-title {
-  display: flex;
-  font-weight: 500;
-  align-items: center;
-  line-height: 1
-}
-
-.markdown-alert .markdown-alert-title .octicon {
-  margin-right: 0.5rem;
-  display: inline-block;
-  overflow: visible !important;
-  vertical-align: text-bottom;
-  fill: currentColor;
-}
-
-.markdown-alert.markdown-alert-note {
-  border-left-color: var(--color-note);
-}
-
-.markdown-alert.markdown-alert-note .markdown-alert-title {
-  color: var(--color-note);
-}
-
-.markdown-alert.markdown-alert-important {
-  border-left-color: var(--color-important);
-}
-
-.markdown-alert.markdown-alert-important .markdown-alert-title {
-  color: var(--color-important);
-}
-
-.markdown-alert.markdown-alert-warning {
-  border-left-color: var(--color-warning);
-}
-
-.markdown-alert.markdown-alert-warning .markdown-alert-title {
-  color: var(--color-warning);
-}
-
-.markdown-alert.markdown-alert-tip {
-  border-left-color: var(--color-tip);
-}
-
-.markdown-alert.markdown-alert-tip .markdown-alert-title {
-  color: var(--color-tip);
-}
-
-.markdown-alert.markdown-alert-caution {
-  border-left-color: var(--color-caution);
-}
-
-.markdown-alert.markdown-alert-caution .markdown-alert-title {
-  color: var(--color-caution);
-}
-
-</style>
-        
-        </head>
-        <body class="vscode-body vscode-light">
-            <ul>
-<li><a href="#overview">Overview</a>
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<p><strong>Creating a Post on Tech Writers Tribe (Web &amp; App)</strong><br>
+<strong>Quick Start Guide</strong></p>
 <ul>
-<li><a href="#key-system-requirements">Key System requirements</a>
+<li><a href="#overview">Overview</a></li>
+<li><a href="#adding-a-post-from-web-browser">Adding a Post from Web Browser</a>
 <ul>
-<li><a href="#getting-started">Getting Started</a></li>
+<li><a href="#add-a-question">Add a Question</a></li>
+<li><a href="#add-a-quiz">Add a Quiz</a></li>
+<li><a href="#add-a-poll">Add a Poll</a></li>
+<li><a href="#share-a-photo">Share a Photo</a></li>
+<li><a href="#share-a-video">Share a Video</a></li>
+<li><a href="#share-a-document">Share a Document</a></li>
+</ul>
+</li>
+<li><a href="#adding-a-post-from-mobile-app">Adding a Post from Mobile App</a>
+<ul>
+<li><a href="#add-a-question-1">Add a Question</a></li>
+<li><a href="#add-a-quiz-1">Add a Quiz</a></li>
+<li><a href="#add-a-poll-1">Add a Poll</a></li>
+<li><a href="#share-a-photo-1">Share a Photo</a></li>
+<li><a href="#share-a-video-1">Share a Video</a></li>
+<li><a href="#share-a-document-1">Share a Document</a></li>
 </ul>
 </li>
 </ul>
-</li>
+<h2 id="overview">Overview</h2>
+<p>The <code>Create Post</code> feature on the <strong>Tech Writers Tribe</strong> app is designed to foster active engagement and knowledge exchange within the community of technical writers. It enables users to share insights, ask questions, provide updates, and spark discussions through a variety of post types.</p>
+<p>This feature allows you to perform the following:</p>
+<ul>
+<li>Add Quiz</li>
+<li>Add Poll</li>
+<li>Add Question</li>
+<li>Add Photos</li>
+<li>Add Videos</li>
+<li>Add Documents</li>
 </ul>
-<h1 id="overview">Overview</h1>
-<p>LinkedIn is a professional networking platform designed to help individuals and organizations connect, share, and grow in their careers and industries. It enables users to build an online professional identity, engage with industry content, and explore career opportunities.</p>
-<p>Key Featuers</p>
-<table>
-<thead>
-<tr>
-<th><a href="http://Sl.No">Sl.No</a></th>
-<th>Key Features</th>
-</tr>
-</thead>
-</table>
-<ol>
-<li>| Professional Profile |</li>
-<li>| Networking Tools |</li>
-<li>| Job Search and Alerts |</li>
-</ol>
-<h2 id="key-system-requirements">Key System requirements</h2>
+<p>The purpose of the <code>Create Post</code> feature is to create a collaborative space where members can:</p>
+<ul>
+<li>Share their expertise and resources.</li>
+<li>Seek and provide peer support.</li>
+<li>Engage in meaningful discussions on industry trends, tools, and best practices.</li>
+<li>Crowdsource ideas, solutions, and feedback from a relevant and experienced audience.</li>
+</ul>
+<p>The feature works on both desktop and mobile platforms, giving you flexibility and a wide range of options for interaction.</p>
+<p><strong>Pre-requisites</strong></p>
 <p>Before getting started, make sure your system meets the following requirements:</p>
+<p><em>For Desktop Access (via Browser):</em></p>
 <ul>
-<li>
-<p>abc</p>
+<li>Operating System:
+<ul>
+<li>Windows 10 or later</li>
+<li>macOS 10.13 or later</li>
+</ul>
 </li>
-<li>
-<p>fgh</p>
-<p>•	Operating System: Windows 10 or later, macOS 10.13 or later</p>
-<p>•	Browsers Supported:
-- Google Chrome (latest version)
-- Mozilla Firefox (latest version)
-- Microsoft Edge (latest version)
-- Safari (macOS only, latest version)</p>
+<li>Browsers Supported:
+<ul>
+<li>Google Chrome</li>
+<li>Mozilla Firefox</li>
+<li>Microsoft Edge</li>
+<li>Safari (macOS only)</li>
+</ul>
 </li>
 </ul>
-<p><strong>Prerequisites</strong></p>
-<p>•	A valid email address</p>
-<p>•	A stable internet connection</p>
-<p>•	Optional: A professional profile photo and updated resume for quicker profile setup</p>
-<h3 id="getting-started">Getting Started</h3>
-<ol>
-<li>
-<p>Sign Up
-•	Go to the <strong>Linkedin website</strong>{<a href="https://in.linkedin.com">https://in.linkedin.com</a>} or launch the LinkedIn mobile app.</p>
-<p>•	Click or tap <code>Join now</code></p>
-<p>•	Enter your name, email address, and create a password.</p>
-<p>•	Confirm your email address through the verification link LinkedIn sends to your inbox.</p>
+<p><em>For Mobile App:</em></p>
+<ul>
+<li>Operating System:
+<ul>
+<li>Android 8.0 or later</li>
+<li>iOS 14.0 or later</li>
+</ul>
 </li>
-<li>
-<p>Complete Your Setup</p>
-<p>•	Add Your Location: Select your country and postal code to receive localized content and job suggestions.</p>
-<p>•	Choose Job Preferences: Indicate your current job title, employment type, or if you're looking for a new role.</p>
-<p>•	Upload a Profile Photo: Choose a clear, professional-looking headshot.</p>
+<li>Storage Space: Approx. 150 MB (varies by device and updates)</li>
+<li>App Source:
+<ul>
+<li>Google Play Store (Android)</li>
+<li>Apple App Store (iOS)</li>
+</ul>
+</li>
+</ul>
+<h2 id="adding-a-post-from-web-browser">Adding a Post from Web Browser</h2>
+<p>You can create and share posts by accessing the platform through the website on a browser.</p>
+<ol>
+<li>Open [https://techwriterstribe.rpy.club/] on your device.</li>
+<li>Log in to your account.</li>
+<li>On the Feed page, perform any of the following:
+<ul>
+<li>From the left pane, select <code>Create a post</code></li>
+<li>In the <code>Share something with the community</code> text box, place the cursor</li>
+<li>In the top right corner, click the <code>+</code> icon</li>
+</ul>
 </li>
 </ol>
-<p><img src="file:///e:\TWT\Local Repo\MDRepo\Images\Amazon-Logo-500x281.png" alt="Image"></p>
+<p>The <code>Create Post</code> dialog box will appear.</p>
+<h3 id="add-a-question">Add a Question</h3>
+<p>This option enables the users to post open-ended questions to encourage discussions or gather insights.<br>
+To add,</p>
+<ol>
+<li>In the dialog box, select the <code>Add Question</code> icon.<br>
+The <code>Add a Question</code> dialog box appears.</li>
+<li>In the <code>Add Your Question here</code> textbox, type your question.</li>
+<li>Select <code>Add</code>.<br>
+The <code>Create Post</code> dialogue box with the provided details will appear on the screen.</li>
+<li>Select a tag from the <code>Add Tag</code> list.</li>
+<li>(Optional) Select the required option.
+<ul>
+<li>Edit:
+<ol>
+<li>Select the <code>Edit</code> icon.<br>
+The details you entered are shown.</li>
+<li>Make changes as required.</li>
+<li>Select <code>Add</code>.<br>
+Note:<br>
+Ensure to edit before you create the post.</li>
+</ol>
+</li>
+<li>Delete:
+<ol>
+<li>Select the <code>Delete</code> icon.<br>
+All the entered details will be deleted.</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>Select <code>Post</code>.</li>
+</ol>
+<p>The question is posted on the feed.</p>
+<h3 id="add-a-quiz">Add a Quiz</h3>
+<p>This option enables the users to test knowledge. The users can pick the right answer from the given options.<br>
+To add,</p>
+<ol>
+<li>In the dialog box, select the <code>Add Quiz</code> icon.<br>
+The <code>Add a Quiz</code> dialog box appears.</li>
+<li>In the <code>Your Question</code> textbox, enter your question.<br>
+Note:<br>
+The question should be limited to under 550 words.</li>
+<li>In the <code>Options</code> textbox, enter your options.<br>
+Note:
+<ul>
+<li>Provide minimum 2 options.</li>
+<li>Select <code>+ Add More</code> to add options.</li>
+<li>Add maximum 4 options.</li>
+</ul>
+</li>
+<li>In the <code>Answer</code> textbox, select the correct option.</li>
+<li>Click <code>Change</code> to modify the selected option.</li>
+<li>From the <code>Expiry</code> dropdown menu, select the option to set the expiry date for the post.</li>
+<li>Select <code>Add</code>.<br>
+The <code>Create Post</code> dialogue box with the provided details will appear on the screen.</li>
+<li>Select option from the <code>Add Tag</code> list to add a tag to the post.</li>
+<li>(Optional) Select the required option:</li>
+</ol>
+<ul>
+<li>Edit:
+<ol>
+<li>Select the <code>Edit</code> icon.<br>
+The details you entered are shown.</li>
+<li>Modify the details as required.</li>
+<li>Select <code>Add</code>.<br>
+Note:<br>
+Ensure to edit before you create the post.</li>
+</ol>
+</li>
+<li>Delete:
+<ol>
+<li>Select the <code>Delete</code> icon.</li>
+</ol>
+</li>
+</ul>
+<ol start="10">
+<li>Select <code>Post</code>.</li>
+</ol>
+<p>The quiz is posted on the feed.</p>
+<h3 id="add-a-poll">Add a Poll</h3>
+<p>This option enables the users to gather opinions, or feedback from a group of people. The users can vote for their preferred option from the given options.
+To add,</p>
+<ol>
+<li>In the dialogue box, select the <code>Add Poll</code> icon.<br>
+The <code>Add a Poll</code> dialogue box will appear on the screen.</li>
+<li>In the <code>Your Question</code> textbox, enter your question.<br>
+Note:<br>
+The question should be limited to under 550 words.</li>
+<li>In the <code>Options</code> textbox, enter your options.<br>
+Note:
+<ul>
+<li>Provide minimum 3 options.</li>
+<li>Select <code>+ Add More</code> to add options.</li>
+<li>Add maximum 6 options.</li>
+</ul>
+</li>
+<li>From the <code>Expiry</code> dropdown menu, select the option to set the expiry date for the post.</li>
+<li>Select <code>Add</code>.<br>
+The <code>Create Post</code> dialogue box with the provided details will appear on the screen.</li>
+<li>(Optional) Select the required option:
+<ul>
+<li>Edit:
+<ol>
+<li>Select the <code>Edit</code> icon.<br>
+The details you entered are shown.</li>
+<li>Modify the details as required.<br>
+You can remove an option or rename the option.</li>
+<li>Select <code>Add</code>.<br>
+Note:<br>
+Ensure to edit before you create the post.</li>
+</ol>
+</li>
+<li>Delete:
+<ol>
+<li>Select the <code>Delete</code> icon.<br>
+All the entered details will be deleted.</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>Select <code>Post</code>.</li>
+</ol>
+<p>The poll is posted on the feed.</p>
+<h3 id="share-a-photo">Share a Photo</h3>
+<p>This option enables the users to upload and share photos and images.<br>
+To share,</p>
+<ol>
+<li>
+<p>In the dialogue box, select the <code>Add Photos</code> icon.<br>
+The <code>Add Photos</code> dialogue box will appear on the screen.</p>
+</li>
+<li>
+<p>Add photos by performing any of the following options:</p>
+<ul>
+<li><code>Click to browse files</code></li>
+</ul>
+<ol>
+<li>On the <code>Add Photos</code> dialogue box, select the <code>Picture</code> icon.<br>
+The folders on your device will be displayed.</li>
+<li>On your device, navigate to the folder to select the photos.</li>
+<li>Select the photos.<br>
+Note:<br>
+The number of photos should be limited to under 25 photos per post.</li>
+<li>Click <code>Open</code> to upload the photo.<br>
+The <code>Add Photos</code> dialogue box with the selected photos will appear on the screen.</li>
+</ol>
+<ul>
+<li><code>Drag and drop</code></li>
+<li>
+<ol>
+<li>On your device, navigate to the folder to select the photos.</li>
+<li>Select the photos.<br>
+Note:<br>
+The number of photos should be limited to under 25 photos per post.</li>
+<li>Drag and drop the selected photos on to the <code>Add Photos</code> window.<br>
+The <code>Add Photos</code> dialogue box with the selected photos will appear on the screen.</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>
+<p>(Optional) Select the required option:</p>
+<ul>
+<li>Delete:
+<ol>
+<li>Select the <code>Delete</code> icon.<br>
+The selected photos will be deleted and the <code>Add Photos</code> window will appear on the screen if all the photos are deleted.</li>
+</ol>
+</li>
+<li>Cancel:
+<ol>
+<li>Select the <code>Cancel</code> icon.<br>
+The task gets cancelled.</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>
+<p>Select <code>Add</code>.<br>
+The <code>Create Post</code> window with the uploaded photos will appear on the screen.</p>
+</li>
+<li>
+<p>Select option from the <code>Add Tag</code> list to add a tag to the post.</p>
+</li>
+<li>
+<p>In the <code>What do you want to talk about</code> textbox, enter information about the photos.</p>
+</li>
+<li>
+<p>(Optional) Select the required option:</p>
+</li>
+</ol>
+<ul>
+<li>Delete:</li>
+</ul>
+<ol>
+<li>Select the <code>Delete</code> icon.<br>
+The selected video will be deleted and the <code>Add Photos</code> window will appear on the screen.
+- Cancel:
+1. Select the <code>Cancel</code> icon.<br>
+The task gets cancelled.</li>
+<li>Select <code>Post</code>.</li>
+</ol>
+<p>The photo/(s) is posted on the feed.</p>
+<h3 id="share-a-video">Share a Video</h3>
+<p>This option enables the users to upload and share videos.<br>
+To share</p>
+<ol>
+<li>
+<p>In the dialogue box, select  the <code>Add Videos</code> icon.<br>
+The <code>Add Videos</code> dialogue box will appear on the screen.</p>
+</li>
+<li>
+<p>Add videos by performing any of the following options:</p>
+<ul>
+<li><code>Click to browse files</code></li>
+</ul>
+<ol>
+<li>On the <code>Add Video</code> dialogue box, select the <code>Picture</code> icon.<br>
+The folders on your device will be displayed.</li>
+<li>On your device, navigate to the folder to select the video.</li>
+<li>Select the video.<br>
+Note:<br>
+The number of photos should be limited to 1 video per post.</li>
+<li>Click <code>Open</code> to upload the video.<br>
+The <code>Add Video</code> dialogue box with the selected video will appear on the screen.</li>
+</ol>
+<ul>
+<li><code>Drag and drop</code></li>
+<li>
+<ol>
+<li>On your device, navigate to the folder to select the video.</li>
+<li>Select the video.<br>
+Note:<br>
+The number of videos should be limited to 1 video per post.</li>
+<li>Drag and drop the selected video on to the <code>Add Video</code> window.<br>
+The <code>Add Video</code> dialogue box with the selected video will appear on the screen.</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>
+<p>(Optional) Select the required option:</p>
+<ul>
+<li>Delete:
+<ol>
+<li>Select the <code>Delete</code> icon.<br>
+The selected video will be deleted and the <code>Add Video</code> window will appear on the screen.</li>
+</ol>
+</li>
+<li>Cancel:
+<ol>
+<li>Select the <code>Cancel</code> icon.<br>
+The task gets cancelled.</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>
+<p>Select <code>Add</code>.<br>
+The <code>Create Post</code> window with the uploaded video  will appear on the screen.</p>
+</li>
+<li>
+<p>Select option from the <code>Add Tag</code> list to add a tag to the post.</p>
+</li>
+<li>
+<p>In the <code>What do you want to talk about</code> textbox, enter information about the video.</p>
+</li>
+<li>
+<p>(Optional) Select the required option:</p>
+<ul>
+<li>Delete:</li>
+</ul>
+<ol>
+<li>Select the <code>Delete</code> icon.<br>
+The selected video will be deleted and <code>Add Video</code> window will appear on the screen.</li>
+</ol>
+<ul>
+<li>Cancel:</li>
+</ul>
+<ol>
+<li>Select the <code>Cancel</code> icon.<br>
+The task gets cancelled.</li>
+</ol>
+</li>
+<li>
+<p>Select <code>Post</code>.</p>
+</li>
+</ol>
+<p>The video is posted on the feed.</p>
+<h3 id="share-a-document">Share a Document</h3>
+<p>This option enables the users to upload and share documents.
+To share,</p>
+<ol>
+<li>In the dialogue box, select the <code>Add Documents</code> icon.<br>
+The <code>Add Documents</code> dialogue box will appear on the screen.</li>
+<li>Add documents by performing any of the following options:
+<ul>
+<li><code>Click here to browse files</code></li>
+</ul>
+<ol>
+<li>On the <code>Add Documents</code> dialogue box, select the icon.<br>
+The folders on your device will be displayed.</li>
+<li>On your device, navigate to the folder to select the documents.</li>
+<li>Select the documents.</li>
+<li>Click Open to upload the documents.
+The <code>Add Documents</code> dialogue box with the selected documents will appear on the screen.</li>
+</ol>
+<ul>
+<li><code>Drag and drop</code></li>
+</ul>
+<ol>
+<li>On your device, navigate to the folder to select the documents.</li>
+<li>Select the documents.</li>
+<li>Drag and drop the selected documents on to the <code>Add Documents</code> dialogue box.<br>
+The <code>Add Documents</code> dialogue box with the selected documents will appear on the screen.</li>
+</ol>
+</li>
+<li>(Optional) Select the required option:
+<ul>
+<li>Delete:
+<ol>
+<li>Select the Delete icon.<br>
+The selected document will be deleted and the <code>Add Documents</code> window will appear on the screen if all the documents are deleted.</li>
+</ol>
+</li>
+<li>Cancel:
+<ol>
+<li>Select Cancel.<br>
+The task gets cancelled.</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>Select <code>Add</code>.<br>
+The <code>Create Post</code> dialogue box with the uploaded documents will appear on the screen.</li>
+<li>Select option from the <code>Add Tag</code> list to add a tag to the post.</li>
+<li>In the <code>What do you want to talk about</code> textbox, enter information about the documents.</li>
+<li>(Optional) Select the required option:
+<ul>
+<li>Delete:</li>
+</ul>
+<ol>
+<li>Select <code>Delete</code> icon.<br>
+The selected document will be deleted and the <code>Add Documents</code> window will appear on the screen.</li>
+</ol>
+<ul>
+<li>Cancel:</li>
+</ul>
+<ol>
+<li>Select the <code>Cancel</code> icon.<br>
+The task gets cancelled.</li>
+</ol>
+</li>
+<li>Select <code>Post</code>.</li>
+</ol>
+<p>The document is posted on the feed.</p>
+<h2 id="adding-a-post-from-mobile-app">Adding a Post from Mobile App</h2>
+<p>You can use the mobile app to create and share posts on the platform. To post from a mobile app, download and install the TWT app, log in, and go to the <code>Create a post</code> section.</p>
+<p>To add,</p>
+<ol>
+<li>Tap the <strong>Tech Writers Tribe</strong> icon on your device to launch the app.</li>
+<li>Log in to your account.</li>
+<li>On the Feed page, at the bottom right corner, click <code>(+)</code> icon.<br>
+A dialogue box will options will appear on the screen.</li>
+</ol>
+<h3 id="add-a-question">Add a Question</h3>
+<p>This option enables the users to post open-ended questions to encourage discussions or gather insights.</p>
+<p>To add,</p>
+<ol>
+<li>In the dialogue box, select <code>Question</code> icon.<br>
+The <code>Share a Question</code> dialogue box will appear on the screen.</li>
+<li>In the <code>Ask Question</code> textbox, type your question.
+<ul>
+<li>Select <code>Reset</code> to delete the question and type a new question.</li>
+<li>Select option from the <code>Add Tag</code> list to add a tag to the post.</li>
+</ul>
+</li>
+<li>Select <code>Post Question</code>.</li>
+</ol>
+<p>The question is posted on the feed.</p>
+<h3 id="add-a-quiz">Add a Quiz</h3>
+<p>This option enables the users to test knowledge. The users can pick the right answer from the given options.<br>
+To add,</p>
+<ol>
+<li>In the dialogue box, select the <code>Quiz</code> icon.
+The <code>Share a Quiz</code> dialogue box will appear on the screen.</li>
+<li>In the <code>Ask Question</code> textbox, type your question.<br>
+Note:
+The question should be limited to under 250 words.
+Select <code>Reset</code> to delete the question and type a new question.</li>
+<li>In the <code>Options</code> textbox, type your options.<br>
+Note:
+<ul>
+<li>Provide minimum 2 options.</li>
+<li>Select <code>+Add More</code> to add options.</li>
+<li>Add maximum 4 options.</li>
+</ul>
+</li>
+<li>In the <code>Answer</code> textbox, select the correct option.</li>
+<li>Select option from the <code>Add Tag</code> list to add a tag to the post.</li>
+<li>Select <code>Post Quiz</code>.</li>
+</ol>
+<p>The quiz is posted on the feed.</p>
+<h3 id="add-a-poll">Add a Poll</h3>
+<p>This option enables the users to gather opinions, or feedback from a group of people. The users can vote for their preferred option from the given options.
+To add,</p>
+<ol>
+<li>In the dialogue box, select the <code>Poll</code> icon.
+The <code>Share a Poll</code> dialogue box will appear on the screen.</li>
+<li>In the <code>Ask Question</code> textbox, type your question.<br>
+Note:
+The question should be limited to under 250 words.
+Select <code>Reset</code> to delete the question and type a new question.</li>
+<li>In the <code>Options</code> textbox, type your options.<br>
+Note:
+<ul>
+<li>Provide minimum 2 options.</li>
+<li>Select <code>+Add More</code> to add options.</li>
+</ul>
+</li>
+<li>Select option from the <code>Add Tag</code> list to add a tag to the post.</li>
+<li>Select <code>Post Poll</code>.</li>
+</ol>
+<p>The poll is posted on the feed.</p>
+<h3 id="share-a-photo">Share a Photo</h3>
+<p>This option enables the users to upload and share photos and images.<br>
+To share,</p>
+<ol>
+<li>In the dialogue box, select the <code>Post</code> icon.<br>
+The <code>Share a Post</code> dialogue box with the options will appear on the screen.</li>
+<li>On the bottom of the screen, select <code>Picture</code> from the options.<br>
+The photos on your device will be displayed.</li>
+<li>On your device, perform any of the following
+<ul>
+<li>Tap <code>Photos</code> to select individual photos</li>
+<li>Tap <code>Album</code> to navigate to the folder to select the photos.<br>
+Note:<br>
+The number of photos should be limited to under 25 photos per post.</li>
+</ul>
+</li>
+<li>Select <code>Done</code>.
+The selected photos will appear on the screen.<br>
+You can add a note to the photos.<br>
+Select the <code>(X)</code> icon on the photo to delete (optional).</li>
+<li>Select option from the <code>Add Tag</code> list to add a tag to the post.</li>
+<li>Select <code>Post</code>.</li>
+</ol>
+<p>The photos are posted on the feed.</p>
+<h3 id="share-a-video">Share a Video</h3>
+<p>This option enables the users to upload and share videos.<br>
+To share,</p>
+<ol>
+<li>In the dialogue box, select the <code>Post</code> icon.<br>
+The <code>Share a Post</code> dialogue box with the options will appear on the screen.</li>
+<li>On the bottom of the screen, select <code>Videos</code> from the options.<br>
+The videos on your device will be displayed.</li>
+<li>On your device, perform any of the following
+<ul>
+<li>Tap <code>Photos</code> to select individual video.</li>
+<li>Tap <code>Album</code> to navigate to a particular folder to select the video.<br>
+The selected video will appear on the screen.<br>
+You can add a note to the video.
+Select the <code>(X)</code> icon on the video to delete (optional).</li>
+</ul>
+</li>
+<li>Select option from the <code>Add Tag</code> list to add a tag to the post.</li>
+<li>Select <code>Post</code>.</li>
+</ol>
+<p>The video is posted on the feed.</p>
+<h3 id="share-a-document">Share a Document</h3>
+<p>This option enables the users to upload and share documents.<br>
+To share,</p>
+<ol>
+<li>In the dialogue box, select the <code>Post</code> icon.<br>
+The <code>Share a Post</code> dialogue box with the options will appear on the screen.</li>
+<li>On the bottom of the screen, select <code>Documents</code> from the options.<br>
+The documents on your device will be displayed.</li>
+<li>On your device, navigate and select the document.<br>
+The selected document will appear on the screen.<br>
+You can add a note to the document.<br>
+Select the <code>(X)</code> icon on the document to delete (optional).</li>
+<li>Select option from the <code>Add Tag</code> list to add a tag to the post.</li>
+<li>Select <code>Post</code>.</li>
+</ol>
+<p>The document is posted on the feed.</p>
 
-            
-            
-        </body>
-        </html>
+</body>
+</html>
