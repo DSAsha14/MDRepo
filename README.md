@@ -1,22 +1,21 @@
-# Creating a Post on Tech Writers Tribe (Web & App)
+**Creating a Post on Tech Writers Tribe (Web & App)**  
 **Quick Start Guide**
 
-- [Creating a Post on Tech Writers Tribe (Web \& App)](#creating-a-post-on-tech-writers-tribe-web--app)
-  - [Overview](#overview)
-  - [Adding a Post from Web Browser](#adding-a-post-from-web-browser)
-    - [Add a Question](#add-a-question)
-    - [Add a Quiz](#add-a-quiz)
-    - [Add a Poll](#add-a-poll)
-    - [Share a Photo](#share-a-photo)
-    - [Share a Video](#share-a-video)
-    - [Share a Document](#share-a-document)
-  - [Adding a Post from Mobile App](#adding-a-post-from-mobile-app)
-    - [Add a Question](#add-a-question-1)
-    - [Add a Quiz](#add-a-quiz-1)
-    - [Add a Poll](#add-a-poll-1)
-    - [Share a Photo](#share-a-photo-1)
-    - [Share a Video](#share-a-video-1)
-    - [Share a Document](#share-a-document-1)
+- [Overview](#overview)
+- [Adding a Post from Web Browser](#adding-a-post-from-web-browser)
+  - [Add a Question](#add-a-question)
+  - [Add a Quiz](#add-a-quiz)
+  - [Add a Poll](#add-a-poll)
+  - [Share a Photo](#share-a-photo)
+  - [Share a Video](#share-a-video)
+  - [Share a Document](#share-a-document)
+- [Adding a Post from Mobile App](#adding-a-post-from-mobile-app)
+  - [Add a Question](#add-a-question-1)
+  - [Add a Quiz](#add-a-quiz-1)
+  - [Add a Poll](#add-a-poll-1)
+  - [Share a Photo](#share-a-photo-1)
+  - [Share a Video](#share-a-video-1)
+  - [Share a Document](#share-a-document-1)
 
 
 ## Overview
