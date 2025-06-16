@@ -370,8 +370,9 @@ To share,
     The number of photos should be limited to under 25 photos per post.
 4.	Select `Done`.
     The selected photos will appear on the screen.   
-    You can add a note to the photos.  
-    Select the `(X)` icon on the photo to delete (optional).
+    Note:  
+    - You can add a note to the photos.  
+    - Select the `(X)` icon on the photo to delete (optional).
 5.	Select option from the `Add Tag` list to add a tag to the post. 
 6. 	Select `Post`.
 
@@ -388,8 +389,9 @@ To share,
     - Tap `Photos` to select individual video. 
     - Tap `Album` to navigate to a particular folder to select the video.   
     The selected video will appear on the screen.   
-    You can add a note to the video. 
-    Select the `(X)` icon on the video to delete (optional).
+    Note:  
+    - You can add a note to the video. 
+    - Select the `(X)` icon on the video to delete (optional).
 4.	Select option from the `Add Tag` list to add a tag to the post. 
 6. 	Select `Post`.
 
@@ -404,8 +406,9 @@ To share,
     The documents on your device will be displayed.
 3.	On your device, navigate and select the document.   
     The selected document will appear on the screen.   
-    You can add a note to the document.   
-    Select the `(X)` icon on the document to delete (optional).
+    Note:  
+    - You can add a note to the document.   
+    - Select the `(X)` icon on the document to delete (optional).
 4.	Select option from the `Add Tag` list to add a tag to the post. 
 5. Select `Post`.
 
