@@ -119,7 +119,7 @@ To add,
 7. Select `Add`.  
    The `Create Post` dialogue box with the provided details will appear on the screen. 
 8. Select option from the `Add Tag` list to add a tag to the post.
-9.  (Optional) Select the required option:
+9. (Optional) Select the required option:
    - Edit:
      1. Select the `Edit` icon.  
         The details you entered are shown. 
@@ -133,8 +133,9 @@ To add,
 
 The quiz is posted on the feed.
 
+
 ### Add a Poll  
-This option enables the users to gather opinions, or feedback from a group of people. The users can vote for their preferred option from the given options.
+This option enables the users to gather opinions, or feedback from a group of people. The users can vote for their preferred option from the given options.  
 To add,
 1. In the dialogue box, select the `Add Poll` icon.  
    The `Add a Poll` dialogue box will appear on the screen. 
@@ -169,7 +170,7 @@ The poll is posted on the feed.
 This option enables the users to upload and share photos and images.  
 To share, 
 1. In the dialogue box, select the `Add Photos` icon.  
-   The `Add Photos` dialogue box will appear on the screen. 
+   The `Add Photos` dialogue box will appear on the screen.   
 2. Add photos by performing any of the following options:  
    - `Click to browse files`  
    1.	On the `Add Photos` dialogue box, select the `Picture` icon.  
@@ -182,17 +183,17 @@ To share,
         The `Add Photos` dialogue box with the selected photos will appear on the screen. 
 
    - `Drag and drop`  
-   - 1. On your device, navigate to the folder to select the photos.  
-     1. Select the photos.   
+     1. On your device, navigate to the folder to select the photos.  
+     2. Select the photos.   
         Note:  
         The number of photos should be limited to under 25 photos per post.
-     2. Drag and drop the selected photos on to the `Add Photos` window.   
+     3. Drag and drop the selected photos on to the `Add Photos` window.   
         The `Add Photos` dialogue box with the selected photos will appear on the screen. 
 3. (Optional) Select the required option: 
-    - Delete:  
+   - Delete:  
         1.	Select the `Delete` icon.  
             The selected photos will be deleted and the `Add Photos` window will appear on the screen if all the photos are deleted.
-    -	Cancel:  
+    - Cancel:  
         1.	Select the `Cancel` icon.  
             The task gets cancelled. 
 4. Select `Add`.  
@@ -201,12 +202,12 @@ To share,
 6. In the `What do you want to talk about` textbox, enter information about the photos.
 7. (Optional) Select the required option:
   - Delete:
-   1. Select the `Delete` icon.  
+     1. Select the `Delete` icon.  
       The selected video will be deleted and the `Add Photos` window will appear on the screen. 
-    - Cancel:
+- Cancel:
     1. Select the `Cancel` icon.  
         The task gets cancelled. 
-8. Select `Post`.  
+1. Select `Post`.  
 
 The photo/(s) is posted on the feed.
 
@@ -227,11 +228,11 @@ To share
         The `Add Video` dialogue box with the selected video will appear on the screen. 
 
    - `Drag and drop`  
-   - 1. On your device, navigate to the folder to select the video.  
-     1. Select the video.  
+     1. On your device, navigate to the folder to select the video.  
+     2. Select the video.  
         Note:  
         The number of videos should be limited to 1 video per post.
-     2. Drag and drop the selected video on to the `Add Video` window.   
+     3. Drag and drop the selected video on to the `Add Video` window.   
         The `Add Video` dialogue box with the selected video will appear on the screen. 
 3. (Optional) Select the required option: 
     - Delete:  
@@ -322,8 +323,8 @@ This option enables the users to test knowledge. The users can pick the right an
 To add, 
 1.	In the dialogue box, select the `Quiz` icon. 
     The `Share a Quiz` dialogue box will appear on the screen. 
-2.	In the `Ask Question` textbox, type your question.  
-    Note: 
+2.	In the `Ask Question` textbox, type your question.    
+    Note:   
     The question should be limited to under 250 words.
     Select `Reset` to delete the question and type a new question.
 3.	In the `Options` textbox, type your options.    
@@ -343,8 +344,8 @@ To add,
 1.	In the dialogue box, select the `Poll` icon. 
 The `Share a Poll` dialogue box will appear on the screen. 
 2.	In the `Ask Question` textbox, type your question.  
-Note: 
-The question should be limited to under 250 words.
+Note:   
+The question should be limited to under 250 words.  
 Select `Reset` to delete the question and type a new question.
 3.	In the `Options` textbox, type your options.    
 Note: 
