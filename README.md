@@ -121,14 +121,14 @@ To add,
 8. Select option from the `Add Tag` list to add a tag to the post.
 9. (Optional) Select the required option:
    - Edit:
-     1. Select the `Edit` icon.  
-        The details you entered are shown. 
-     2. Modify the details as required.
-     3. Select `Add`.  
-        Note:   
-        Ensure to edit before you create the post. 
+   1. Select the `Edit` icon.  
+      The details you entered are shown. 
+   2. Modify the details as required.
+   3. Select `Add`.  
+      Note:   
+      Ensure to edit before you create the post. 
    - Delete:
-     1. Select the `Delete` icon.
+   1. Select the `Delete` icon.
 10. Select `Post`.  
 
 The quiz is posted on the feed.
@@ -160,7 +160,7 @@ To add,
         Note:   
         Ensure to edit before you create the post. 
    - Delete:
-     1. Select the `Delete` icon.  
+    1. Select the `Delete` icon.  
         All the entered details will be deleted.
 7. Select `Post`.  
 
