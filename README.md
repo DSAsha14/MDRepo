@@ -91,8 +91,8 @@ To add,
       The details you entered are shown. 
    2. Make changes as required.
    3. Select `Add`.  
-        Note:  
-        Ensure to edit before you create the post.
+   Note:  
+   Ensure to edit before you create the post.
    - Delete:
    1. Select the `Delete` icon.    
         All the entered details will be deleted.  
@@ -125,8 +125,8 @@ To add,
       The details you entered are shown. 
    2. Modify the details as required.
    3. Select `Add`.  
-      Note:   
-      Ensure to edit before you create the post. 
+    Note:   
+    Ensure to edit before you create the post. 
    - Delete:
    1. Select the `Delete` icon.
 10. Select `Post`.  
@@ -157,8 +157,8 @@ To add,
     2. Modify the details as required.  
         You can remove an option or rename the option.
     3. Select `Add`.  
-        Note:   
-        Ensure to edit before you create the post. 
+    Note:   
+    Ensure to edit before you create the post. 
    - Delete:
     1. Select the `Delete` icon.  
         All the entered details will be deleted.
@@ -257,7 +257,7 @@ To share
 The video is posted on the feed.
 
 ### Share a Document  
-This option enables the users to upload and share documents.
+This option enables the users to upload and share documents.  
 To share,
 1. In the dialogue box, select the `Add Documents` icon.  
    The `Add Documents` dialogue box will appear on the screen. 
@@ -267,7 +267,7 @@ To share,
         The folders on your device will be displayed.
     2.	On your device, navigate to the folder to select the documents.
     3.	Select the documents.
-    4.	Click Open to upload the documents. 
+    4.	Click `Open` to upload the documents. 
         The `Add Documents` dialogue box with the selected documents will appear on the screen. 
     -	`Drag and drop`
    1. On your device, navigate to the folder to select the documents.
@@ -306,8 +306,7 @@ To add,
     A dialogue box will options will appear on the screen. 
 
 ### Add a Question
-This option enables the users to post open-ended questions to encourage discussions or gather insights.
-
+This option enables the users to post open-ended questions to encourage discussions or gather insights.  
 To add, 
 1.	In the dialogue box, select `Question` icon.   
     The `Share a Question` dialogue box will appear on the screen. 
@@ -319,14 +318,14 @@ To add,
 The question is posted on the feed.
 
 ### Add a Quiz
-This option enables the users to test knowledge. The users can pick the right answer from the given options.  
+This option enables the users to test knowledge. The users can pick the right answer from the given options.    
 To add, 
 1.	In the dialogue box, select the `Quiz` icon. 
     The `Share a Quiz` dialogue box will appear on the screen. 
 2.	In the `Ask Question` textbox, type your question.    
     Note:   
-    The question should be limited to under 250 words.
-    Select `Reset` to delete the question and type a new question.
+    - The question should be limited to under 250 words.  
+    - Select `Reset` to delete the question and type a new question.
 3.	In the `Options` textbox, type your options.    
     Note: 
       - Provide minimum 2 options.  
@@ -339,18 +338,18 @@ To add,
 The quiz is posted on the feed. 
 
 ### Add a Poll
-This option enables the users to gather opinions, or feedback from a group of people. The users can vote for their preferred option from the given options.
+This option enables the users to gather opinions, or feedback from a group of people. The users can vote for their preferred option from the given options.  
 To add, 
 1.	In the dialogue box, select the `Poll` icon. 
-The `Share a Poll` dialogue box will appear on the screen. 
+    The `Share a Poll` dialogue box will appear on the screen. 
 2.	In the `Ask Question` textbox, type your question.  
-Note:   
-The question should be limited to under 250 words.  
-Select `Reset` to delete the question and type a new question.
+    Note:   
+    - The question should be limited to under 250 words.  
+    - Select `Reset` to delete the question and type a new question.
 3.	In the `Options` textbox, type your options.    
 Note: 
-    -	Provide minimum 2 options.  
-    -   Select `+Add More` to add options.
+    - Provide minimum 2 options.  
+    - Select `+Add More` to add options.
 4.	Select option from the `Add Tag` list to add a tag to the post.
 5.	Select `Post Poll`. 
 
@@ -390,8 +389,8 @@ To share,
     - Tap `Album` to navigate to a particular folder to select the video.   
     The selected video will appear on the screen.   
     Note:  
-    - You can add a note to the video. 
-    - Select the `(X)` icon on the video to delete (optional).
+      - You can add a note to the video. 
+      - Select the `(X)` icon on the video to delete (optional).
 4.	Select option from the `Add Tag` list to add a tag to the post. 
 6. 	Select `Post`.
 
