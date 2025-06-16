@@ -180,7 +180,7 @@ To share,
         Note:    
         The number of photos should be limited to under 25 photos per post.
     4.	Click `Open` to upload the photo.   
-            The `Add Photos` dialogue box with the selected photos will appear on the screen. 
+        The `Add Photos` dialogue box with the selected photos will appear on the screen. 
 
    - `Drag and drop`  
     1. On your device, navigate to the folder to select the photos.  
@@ -188,7 +188,7 @@ To share,
        Note:  
        The number of photos should be limited to under 25 photos per post.
     3. Drag and drop the selected photos on to the `Add Photos` window.   
-            The `Add Photos` dialogue box with the selected photos will appear on the screen. 
+        The `Add Photos` dialogue box with the selected photos will appear on the screen. 
 3. (Optional) Select the required option: 
    - Delete:  
     1.	Select the `Delete` icon.  
@@ -228,19 +228,19 @@ To share
         The `Add Video` dialogue box with the selected video will appear on the screen. 
 
    - `Drag and drop`  
-     1. On your device, navigate to the folder to select the video.  
-     2. Select the video.  
+    1. On your device, navigate to the folder to select the video.  
+    2. Select the video.  
         Note:  
         The number of videos should be limited to 1 video per post.
-     3. Drag and drop the selected video on to the `Add Video` window.   
+    3. Drag and drop the selected video on to the `Add Video` window.   
         The `Add Video` dialogue box with the selected video will appear on the screen. 
 3. (Optional) Select the required option: 
     - Delete:  
-        1.	Select the `Delete` icon.  
-            The selected video will be deleted and the `Add Video` window will appear on the screen. 
+    1.	Select the `Delete` icon.  
+        The selected video will be deleted and the `Add Video` window will appear on the screen. 
     -	Cancel:  
-        1.	Select the `Cancel` icon.  
-            The task gets cancelled. 
+    1.	Select the `Cancel` icon.  
+        The task gets cancelled. 
 4. Select `Add`.  
    The `Create Post` window with the uploaded video  will appear on the screen. 
 5. Select option from the `Add Tag` list to add a tag to the post.
@@ -276,11 +276,11 @@ To share,
         The `Add Documents` dialogue box with the selected documents will appear on the screen. 
 3. (Optional) Select the required option: 
     - Delete:  
-        1.	Select the Delete icon.  
-            The selected document will be deleted and the `Add Documents` window will appear on the screen if all the documents are deleted. 
+    1.	Select the Delete icon.  
+        The selected document will be deleted and the `Add Documents` window will appear on the screen if all the documents are deleted. 
     -	Cancel:  
-        1.	Select Cancel.  
-            The task gets cancelled.
+    1.	Select Cancel.  
+        The task gets cancelled.
 4. Select `Add`.  
    The `Create Post` dialogue box with the uploaded documents will appear on the screen. 
 5. Select option from the `Add Tag` list to add a tag to the post.
