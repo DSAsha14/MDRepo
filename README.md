@@ -204,7 +204,7 @@ To share,
    - Delete:
      1. Select the `Delete` icon.  
       The selected video will be deleted and the `Add Photos` window will appear on the screen. 
-- Cancel:
+   - Cancel:
     1. Select the `Cancel` icon.  
         The task gets cancelled. 
 8.  Select `Post`.  
