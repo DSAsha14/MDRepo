@@ -173,22 +173,22 @@ To share,
    The `Add Photos` dialogue box will appear on the screen.   
 2. Add photos by performing any of the following options:  
    - `Click to browse files`  
-   1.	On the `Add Photos` dialogue box, select the `Picture` icon.  
-        The folders on your device will be displayed.
-    2.	On your device, navigate to the folder to select the photos.
-    3.	Select the photos.  
-        Note:    
-        The number of photos should be limited to under 25 photos per post.
-    4.	Click `Open` to upload the photo.   
-        The `Add Photos` dialogue box with the selected photos will appear on the screen. 
+        1.	On the `Add Photos` dialogue box, select the `Picture` icon.  
+            The folders on your device will be displayed.
+        2.	On your device, navigate to the folder to select the photos.
+        3.	Select the photos.  
+            Note:    
+            The number of photos should be limited to under 25 photos per post.
+        4.	Click `Open` to upload the photo.   
+            The `Add Photos` dialogue box with the selected photos will appear on the screen. 
 
    - `Drag and drop`  
-     1. On your device, navigate to the folder to select the photos.  
-     2. Select the photos.   
-        Note:  
-        The number of photos should be limited to under 25 photos per post.
-     3. Drag and drop the selected photos on to the `Add Photos` window.   
-        The `Add Photos` dialogue box with the selected photos will appear on the screen. 
+       1. On your device, navigate to the folder to select the photos.  
+       2. Select the photos.   
+            Note:  
+            The number of photos should be limited to under 25 photos per post.
+       3. Drag and drop the selected photos on to the `Add Photos` window.   
+            The `Add Photos` dialogue box with the selected photos will appear on the screen. 
 3. (Optional) Select the required option: 
    - Delete:  
         1.	Select the `Delete` icon.  
@@ -201,13 +201,13 @@ To share,
 5. Select option from the `Add Tag` list to add a tag to the post. 
 6. In the `What do you want to talk about` textbox, enter information about the photos.
 7. (Optional) Select the required option:
-  - Delete:
+   - Delete:
      1. Select the `Delete` icon.  
       The selected video will be deleted and the `Add Photos` window will appear on the screen. 
 - Cancel:
     1. Select the `Cancel` icon.  
         The task gets cancelled. 
-1. Select `Post`.  
+8.  Select `Post`.  
 
 The photo/(s) is posted on the feed.
 
